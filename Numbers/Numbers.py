@@ -15,4 +15,6 @@ while number != 0:
 print("After reverse number: %s" %(reverse_num))
 
 
-#This code takes an input from the user and stores it in the variable n. Then, it prints the original number n. After that, it initializes a variable reverse to 0 and uses a while loop to continuously add the last digit of n to reverse while also updating n to be the integer division of n by 10, until n becomes zero. Finally, it prints the reversed number.
+"""This code takes an input from the user and stores it in the variable n. Then, it prints the original number n.
+After that, it initializes a variable reverse to 0 and uses a while loop to continuously add the last digit of n to reverse while also
+updating n to be the integer division of n by 10, until n becomes zero. Finally, it prints the reversed number."""

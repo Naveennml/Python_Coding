@@ -93,14 +93,20 @@ for i in range(number):
 
 ###5. Write a program in Python to print the Fibonacci series using recursive method.
 
+"""
+Recursion has 2 things
+- Base case  
+- recursive case
+"""
+
 
 def fibonacci(number):
-    if number == 0:
+    if number == 0: # Base Case
         return number
     elif number == 1:
-        return number
+        return number # Base Case
     else:
-        return fibonacci(number-1) + fibonacci(number-2)
+        return fibonacci(number-1) + fibonacci(number-2) # Recursive Case
     
 print("Printing fibonacci series using recursive method")
 number=10
@@ -223,3 +229,168 @@ tmp = a
 a = b
 b = tmp
 print(a, b)
+
+
+###13. Write a program in Python to find prime factors of a given integer.
+
+
+"""
+Consider 12
+Factors of 12 are 1, 2, 3, 4, 6, 12 because all of these numbers can divide 12 without leaving any remainder.
+
+A prime number is a number that has only two factors: 1 and itself.
+Examples of prime numbers are 2, 3, 5, 7, 11, etc.
+
+Prime factors are factors of a number that are prime numbers.
+
+First, list the factors of 12: 
+1, 2, 3, 4, 6, 12
+Now, from these factors, only 2 and 3 are prime numbers
+
+Therefore, the prime factors of 12 are 2 and 3.
+
+12/(2) = 6  , 6/(2) = 3, 3/(3) = 1
+
+[ 2*2*3 ] i.e [ 2, 2, 3] 
+"""
+
+def factors(number):
+    num = 2
+    factors = []
+    while num * num <= number:
+        if number % num:
+            num += 1
+        else:
+            number //= num
+            factors.append(num)
+    if num > 1:
+        factors.append(number)
+    return factors 
+
+number = 12
+f=factors(number)
+print(f)
+
+
+###14.Write a program in Python to add two integer without using arithmetic operator?
+
+"""
+Binary of 8 = 8/2(0), 4/2(0), 2/1(0), (1) ... 1000
+Decimal of 1000 is 
+32 16 8 4 2 1
+      1 0 0 0    ....... 8
+
+carry = a & b
+
+    0101
+  & 0011
+  --------
+    0001  (This is the carry)
+
+a = a ^ b
+
+    0101
+  ^ 0011
+  --------
+    0110  (This is the sum without carry)
+
+
+b = carry << 1
+
+    0001  (carry)
+  << 1
+  --------
+    0010  (This is the new value of b)
+
+"""
+
+
+def sum(a, b):
+    while b!= 0:
+        carry = a & b
+        a = a ^ b
+        b = carry << 1
+    return a
+
+a=5
+b=3
+s=sum(a,b)
+print(s)
+
+
+###15. Write a program in Python to find given number is perfect or not?
+
+"""
+What is Perfect Number?
+
+consider 8 & 6
+
+6/1 = 6, 6/2 = 3, 3/3 = 1  .. sum of divider 1+2+3 = 6 its a perfect number
+8/1 = 8, 8/2 = 4, 4/4 = 1 ..  sum of divider 1+2+4 = 7 its not a perfect number
+
+"""
+
+def perfect(num):
+    sum = 0
+    for i in range(1, (num//2)+1):
+        if num % i == 0:
+            sum = sum+i
+   
+    if sum == num:
+        return "perfect"
+    else:
+        return "not perfect"
+
+num = 6
+print(perfect(num))
+
+
+###16. Python Program to find the Average of numbers with explanations
+
+numbers = [4, 8, 15, 16, 23]
+sum = 0
+size = len(numbers)
+for i in range(size):
+    sum += numbers[i]
+print("Avg", sum/len(numbers))
+
+###17. Python Program to calculate factorial using iterative method.
+
+"""
+factorial of 5 is 5! = 5 x 4 x 3 x 2 x 1 = 120
+"""
+
+def factorial(number):
+    final = 1
+    for i in range(1, number+1):
+        print(i)
+        final = final * i
+    return final
+
+number = 5
+final = factorial(number)
+print(final)
+
+
+###18. Python Program to calculate factorial using recursion.
+
+def fact(n):
+   if n == 0:
+       return 1
+   else:
+       return n * fact(n-1)
+
+n=5
+res=fact(n)
+print(res)
+
+
+###19.Python Program to check a given number is even or odd.
+
+n=5
+
+if n % 2:
+    print("odd")
+else:
+    print("even")
+

@@ -394,3 +394,80 @@ if n % 2:
 else:
     print("even")
 
+###20. Python program to print first n Prime Number with explanation.
+
+""" 
+input = 5
+ouput [2, 3, 5, 7, 11]
+"""
+
+def is_prime(n): 
+    is_prime = 1
+    for i in range(2, n//2+1):
+        if n % i == 0:
+            is_prime = 0
+            break
+    return is_prime
+
+s = 5
+l = [] 
+c = 0 
+start = 2
+
+while c < s:
+    if is_prime(start): 
+        l.append(start)
+        c = c + 1
+    start = start +  1
+        
+print("List of prime numbers %s" % l )
+
+
+###21. Python Program to print Prime Number in a given range.
+
+"""
+Prime numbers in the range [10, 30]: [11, 13, 17, 19, 23, 29]
+"""
+
+start=10
+end=30
+
+def is_prime(n):
+    is_prime = 1
+    for i in range(2, n//2+1):
+        if n % i == 0:
+            is_prime = 0
+            break
+    return is_prime
+
+def prime_range(start, end):
+    range_list = []
+    for i in range(start, end):
+        if is_prime(i):
+            range_list.append(i)
+    return range_list
+
+print("Prime list", prime_range(start, end))
+
+###22. Python Program to find Smallest number among three.
+
+
+a=2
+b=3
+c=5
+
+smallest=a
+
+if b < smallest:
+    smallest = b
+if c < smallest:
+    smallest = c
+
+print(smallest)
+
+###23. Python program to calculate the power using the POW method.
+
+base = 2
+exponent = 3
+res = pow(base, exponent)
+print("Power", res)

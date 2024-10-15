@@ -471,3 +471,85 @@ base = 2
 exponent = 3
 res = pow(base, exponent)
 print("Power", res)
+
+
+###24. Python Program to calculate the power without using POW function(using for loop)
+
+
+base = 2
+expo = 4
+power = 1
+if power != 0:
+    for i in range(expo):
+        power = power * base
+else:
+    power = 1
+
+print(power)
+
+
+###25. Python Program to calculate the power without using POW function.(using while loop).
+
+base = 2
+expo = 4
+power = 1
+if power != 0: 
+    while expo > 0:
+        power = power * base
+        expo = expo - 1
+else:
+    power = 1
+
+print(power)
+
+###26. Python Program to calculate the square of a given number.
+
+num =  2
+print("Square", num*num)
+
+###27. Python Program to calculate the cube of a given number.
+
+num = 2
+print("Cube", num*num*num)
+
+###28. Python Program to calculate the square root of a given number.
+
+num = 100
+
+for i in range(1, num):
+    if (i*i) == num:
+        print("Square of", num, "is", i)
+
+##other way
+import math
+print(int(math.sqrt(num)))
+
+
+###29. Python program to calculate LCM of given two numbers.
+
+"""
+LCM of (4, 10) / [2]  = (2, 5) / [2] = (1, 5) / [5] = (1, 1)
+(2*2*5) = 20 is LCM
+"""
+
+
+n1=4
+n2=10
+lcm=1
+start=2
+while n1 != 1 or n2 != 1:
+    flag = 0
+    if n1 != 1 and n1 % start == 0:
+        n1 = n1/start
+        flag = 1
+    if n2 != 1 and n2 % start == 0:
+        n2 = n2/start
+        flag = 1
+    if flag:
+        lcm = lcm * start
+    else:
+        start = start + 1
+print("LCM", lcm)
+
+             
+ 

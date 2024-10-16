@@ -533,8 +533,8 @@ LCM of (4, 10) / [2]  = (2, 5) / [2] = (1, 5) / [5] = (1, 1)
 """
 
 
-n1=4
-n2=10
+n1=60
+n2=90
 lcm=1
 start=2
 while n1 != 1 or n2 != 1:
@@ -552,4 +552,69 @@ while n1 != 1 or n2 != 1:
 print("LCM", lcm)
 
              
- 
+###30. Python Program to find GCD or HCF of two numbers. 
+
+"""
+GCD 8 of 12 is 4 
+step1: divide greater num 12 % 8 we have reminder 4 so its not 
+step2: divide by reminder 12 % 4 here reminder is 0 so it is
+"""
+
+n1=60
+n2=90
+
+ma=max(n1,n2)
+mi=min(n1,n2)
+
+while ma % mi:
+    mi = ma % mi
+
+print("HCF", mi)
+
+
+###31. Python Program to find GCD of two numbers using recursion
+
+def gcd(n1, n2):
+    if n2==0:
+        return n1
+    return gcd(n2, n1%n2)
+
+n1=60
+n2=90
+
+print(gcd(n1,n2))
+
+###32. Python Program to Convert Decimal Number into Binary.
+
+bin = 10100
+
+dec = 0
+
+c = 1
+
+while bin !=0:
+    if bin % 10:
+        dec = dec + c
+    c = c * 2
+    bin = bin//10
+
+print("Dicimal", dec)
+
+
+"""
+Recursive method
+"""
+def binary_to_decimal(n):
+    # Base case
+    if n == 0:
+        return 0
+    else:
+        # Recursive case
+        return n % 10 + 2 * binary_to_decimal(n // 10)
+
+# Example usage
+binary_number = 1010
+decimal_representation = binary_to_decimal(binary_number)
+print(f"Decimal representation of {binary_number} is {decimal_representation}")
+
+

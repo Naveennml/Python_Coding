@@ -618,3 +618,65 @@ decimal_representation = binary_to_decimal(binary_number)
 print(f"Decimal representation of {binary_number} is {decimal_representation}")
 
 
+###33.Python Program to convert Decimal number to Octal number.
+
+"""
+Octal number if num is less 8 then its octal number is that number its self
+example: 5 octal number is 5
+consider 10
+
+10 / 8 rem = 2, 1 
+
+12 is octal 
+
+last quotent , reminder in reverse order in this case 
+
+1 is quotent and rem is 2 so 12
+"""
+
+def find_oct(num):
+    if num < 8:
+        return num
+    else:
+        octn = 0
+        count = 0
+        while num >= 8:
+            rem = num % 8
+            num = num // 8
+            octn = octn + ( 10 ** count ) * rem
+            count = count + 1
+        last_rem = num % 8
+        return octn + ( 10 ** count ) * last_rem
+
+num = 490
+print(find_oct(num))
+
+
+###34. Python Program to check the given year is a leap year or not.
+
+"""
+Step1: divisble by 4
+step2: not divisible by 100 id devides step3
+step3: if divisible by 400
+
+"""
+
+def is_leap_year(year):
+    if (year % 4 == 0):
+        if (year % 100 == 0):
+            if (year % 400 == 0):
+                return True
+            else:
+                return False
+        else:
+            return True
+    else:
+        return False
+
+# Example usage:
+year = 2024
+if is_leap_year(year):
+    print(f"{year} is a leap year.")
+else:
+    print(f"{year} is not a leap year.")
+

@@ -680,3 +680,38 @@ if is_leap_year(year):
 else:
     print(f"{year} is not a leap year.")
 
+
+###35. Python Program to convert Celsius to Fahrenheit.
+"""
+°C = (°F - 32) × 5/9
+"""
+
+f=96.8
+
+c=(f-32) * 5 / 9
+
+print("Celsius %s" %c)
+
+###36. Python Program to convert Fahrenheit to Celsius.
+"""
+°F = °C × (9/5) + 32
+"""
+
+c=34
+
+f = c * (9/5) + 32
+
+print("Fahrenheit %s" %f)
+
+
+###37. Python program to calculate Simple Interest with explanation.
+"""
+Simple intrest =  p * t * r / 100
+"""
+
+p = 10000
+r = 5
+t = 5
+
+si = p * t * r / 100
+print("SI", si)

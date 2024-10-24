@@ -146,3 +146,46 @@ if is_digit:
 else:
     print("false")
 
+###7.Python program to check given character is digit or not using isdigit() method.
+
+ch = "u" 
+if ch.isdigit():
+    print("The Given Character ", ch, "is a Digit")
+else:
+    print("The Given Character ", ch, "is not a Digit")
+
+
+###8.Python program to replace the string space with a given character.
+
+char = "n"
+string = "naveen"
+print(string.replace("n", "c"))
+
+###9. Python program to convert lowercase char to uppercase of string
+
+string = "NAVEEN"
+print(string.lower())
+
+###10.Python program to convert lowercase vowel to uppercase in string.
+
+string = "naveen"
+print(string.upper())
+
+###11.Python program to delete vowels in a given string.
+
+string = "naveen"
+new_string = ""
+for i in range(0, len(string)):
+    if string[i] == "a" or string[i] == "i" or string[i] == "o" or string[i] == "e" or string[i] == "u" :
+        continue
+    else: 
+        new_string = new_string+string[i]
+print(new_string)
+
+""" Using join and in """
+
+#def delete_vowels(str):
+#  vowels = "aeiouAEIOU"
+#  str_without_vowels = "".join([c for c in str if c not in vowels])
+#  return str_without_vowels
+

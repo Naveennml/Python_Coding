@@ -189,3 +189,150 @@ print(new_string)
 #  str_without_vowels = "".join([c for c in str if c not in vowels])
 #  return str_without_vowels
 
+
+###12.Python program to count Occurrence Of Vowels & Consonants in a String.
+
+vowel = "aeiou"
+string = "naveen"
+
+v_c = 0
+c_c = 0
+
+for i in string:
+    if i in vowel:
+        v_c += 1
+    else:
+        c_c += 1
+print(f"Vowels: {v_c}, Consonanats: {c_c}")
+
+###13. Python program to print the highest frequency character in a String.
+
+string = "Hello every one"
+dict = {}
+for i in string:
+    if i in dict:
+        dict[i] = dict[i] + 1
+    else:
+        dict[i] = 1
+grater = {count : 0, val : ''}
+for k in dict.keys():
+   if dict[k] > grater[count]:
+       grater[count] = dict[k]
+       grater[val] = k
+print(f"char {grater[val]}, val {grater[count]}")
+
+
+###14. Python program to Replace First Occurrence Of Vowel With ‘-‘ in String.
+
+string = "naveen"
+for i in string:
+    if i in "aeiou":
+        string_new = string.replace(i, "-")
+        break
+print(string_new)
+
+
+###15. Python program to count alphabets, digits and special characters.
+
+alphabet = 0
+digits = 0
+specil_charcter = 0
+
+string = "Hi Naveen @1123 how are you ?"
+for i in string:
+    if i == " ":
+        next
+    elif i.isdigit():
+        digits += 1
+    elif i.isalpha():
+        alphabet += 1
+    else:
+        specil_charcter += 1
+
+print(f"alph : {alphabet}, dig : {digits}, speci : {specil_charcter}")
+
+
+###16. Python program to separate characters in a given string.
+
+string = 'naveen'
+out = [ i for i in string ]
+print(out)
+
+###17. Python program to remove blank space from string.
+
+string = "Hi Naveen @how are you ?"
+print(string.replace(" ", ""))
+
+###18. Python program to concatenate two strings using join() method.
+
+string1 = "Naveen"
+string2 = "Chaithra"
+
+print("".join([string1, string2]))
+
+###19. Python program to concatenate two strings without using join() method.
+
+string1 = "Naveen"
+string2 = "Chaithra"
+
+print(string1+string2)
+
+###20. Python program to remove repeated character from string.
+
+string = "naveen"
+for i in  string:
+    if string.count(i) > 1:
+        string = string.replace(i, "")
+print(string)
+
+
+""" other way """
+
+def remove_duplicates(string):
+    new_string = ""
+    for char in string:
+        if char not in new_string:
+            new_string += char
+    return new_string
+input_string = "example string"
+output_string = remove_duplicates(input_string)
+print(output_string)
+
+
+###21. Python program to calculate sum of integers in string
+
+string = "qwel123rty456"
+sum = 0
+for i in string:
+    if i.isdigit():
+        di = int(i)
+        sum = sum + di
+print(sum)
+
+###22. Python program to print all non repeating character in string.
+
+string = "naveen"
+
+new_sting = ""
+
+for i in string:
+    if string.count(i) == 1:
+        new_sting = new_sting + i
+print(new_sting)
+
+### 23. Python program to copy one string to another string.
+
+st1 = "Naveen"
+st2 =  st1
+print(st2)
+
+### 24. Python Program to sort characters of string in ascending order.
+
+st = "naveen"
+print("".join(sorted(st)))
+
+### 25. Python Program to sort character of string in descending order.
+
+st = "naveen"
+print("".join(sorted(st, reverse=True)))
+

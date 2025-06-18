@@ -139,25 +139,21 @@ else:
 
 ###7. Write a program in Python to check whether a number is palindrome or not using recursive method.
 
-def reverse(n):
-    if n < 10:
-        return n
-    else:
-        return int(str(n % 10) + str(reverse(n//10)))
 
-def is_palindrome(number):
-    print(reverse(number))
-    if number == reverse(number):
-        return True
-    else:
-        return False
+def is_palindrome(num, rev=0, orig=None):
+    if orig is None:
+        orig = num
+    if num == 0:
+        return rev == orig
+    return is_palindrome(num // 10, rev * 10 + num % 10, orig)
 
-number=121
-
+# Example usage
+number = 12321
 if is_palindrome(number):
-    print("%s is Palindrome" %(number))
+    print(f"{number} is a palindrome.")
 else:
-    print("%s is Not Palindrome" %(number))
+    print(f"{number} is not a palindrome.")
+
 
 
 ###8. Write a program in Python to find greatest among three integers.

@@ -624,6 +624,9 @@ binary_number = 1010
 decimal_representation = binary_to_decimal(binary_number)
 print(f"Decimal representation of {binary_number} is {decimal_representation}")
 
+#other way using int
+
+decimal_number = int(binary_number, 2)
 
 ###33.Python Program to convert Decimal number to Octal number.
 
@@ -814,3 +817,5 @@ print("octal value of", numbers, "is", st)
 
 number = 50
 print("octal value of", numbers, "is", bin(number)[2:])
+
+

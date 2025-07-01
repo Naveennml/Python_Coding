@@ -585,7 +585,13 @@ n2=90
 
 print(gcd(n1,n2))
 
-###32. Python Program to Convert Decimal Number into Binary.
+###32. Python Program to Convert binary Number into decimal.
+
+#2 ** 0 = 1     == 0
+#2 ** 1 = 2     == 0
+#2 ** 2 = 4     == 1
+#2 ** 3 = 8     == 0
+#2 ** 4 = 16    == 1
 
 bin = 10100
 

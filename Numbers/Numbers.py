@@ -628,10 +628,10 @@ print(f"Decimal representation of {binary_number} is {decimal_representation}")
 ###33.Python Program to convert Decimal number to Octal number.
 
 """
-Octal number if num is less 8 then its octal number is that number its self
+Octal number if num is less then 8 its octal number is that number its self
 example: 5 octal number is 5
-consider 10
 
+consider 10
 10 / 8 rem = 2, 1 
 
 12 is octal 
@@ -722,3 +722,33 @@ t = 5
 
 si = p * t * r / 100
 print("SI", si)
+
+
+###38.Python Program to convert Decimal number to binary number.
+
+"""
+✍️ Example: Convert 13 to binary
+* 13 ÷ 2 = 6, remainder 1
+* 6 ÷ 2 = 3, remainder 0
+* 3 ÷ 2 = 1, remainder 1
+* 1 ÷ 2 = 0, remainder 1
+Reading remainders from bottom to top: 1101
+So, 13 in decimal = 1101 in binary.
+"""
+
+def find_oct(num):
+    if num < 8:
+        return num
+    else:
+        octn = 0
+        count = 0
+        while num >= 8:
+            rem = num % 8
+            num = num // 8
+            octn = octn + ( 10 ** count ) * rem
+            count = count + 1
+        last_rem = num % 8
+        return octn + ( 10 ** count ) * last_rem
+
+num = 490
+print(find_oct(num))

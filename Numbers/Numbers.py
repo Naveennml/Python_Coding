@@ -696,21 +696,6 @@ st = ''.join(str(i) for i in bina)
 print("octal value of", numbers, "is", st)
 
 
-number = 50
-number = numbers
-bina = []
-
-while number !=1:
-    b = number % 2
-    bina.append(b)
-    number = number // 2
-if number == 1:
-    bina.append(number)
-    
-bina = bina[::-1]
-st = ''.join(str(i) for i in bina)
-print("octal value of", numbers, "is", st)
-
 
 ###34. Python Program to check the given year is a leap year or not.
 

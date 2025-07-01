@@ -652,7 +652,7 @@ print(find_oct(num))
 
 """
 Step1: divisble by 4
-step2: not divisible by 100 id devides step3
+step2: not divisible by 100 if divides step3
 step3: if divisible by 400
 
 """

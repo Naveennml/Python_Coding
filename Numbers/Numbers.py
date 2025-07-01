@@ -628,17 +628,25 @@ print(f"Decimal representation of {binary_number} is {decimal_representation}")
 ###33.Python Program to convert Decimal number to Octal number.
 
 """
-Octal number if num is less then 8 its octal number is that number its self
-example: 5 octal number is 5
+🔢 Step-by-Step Conversion of 10 (Decimal) → Octal
+We use division by 8 (since octal is base 8), and we keep track of the remainders:
 
-consider 10
-10 / 8 rem = 2, 1 
+10 ÷ 8 = 1 remainder 2
 
-12 is octal 
+1 ÷ 8 = 0 remainder 1
 
-last quotent , reminder in reverse order in this case 
+Now, we read the remainders in reverse order: → From bottom to top: 1 then 2 → So the octal result is 12
 
-1 is quotent and rem is 2 so 12
+The process is:
+
+Keep dividing the number by 8
+
+Record each remainder
+
+Stop when the quotient is 0
+
+Read remainders in reverse
+
 """
 
 def find_oct(num):

@@ -667,6 +667,51 @@ num = 490
 print(find_oct(num))
 
 
+#Other way 
+
+"""
+🧮 Example: Convert 65 to octal
+* 65 ÷ 8 = 8 remainder 1
+* 8 ÷ 8 = 1 remainder 0
+* 1 ÷ 8 = 0 remainder 1
+Now read the remainders bottom to top → 101
+So, 65 in decimal = 101 in octal.
+"""
+
+
+
+number = 50
+number = numbers
+bina = []
+
+while number !=1:
+    b = number % 8
+    bina.append(b)
+    number = number // 8
+if number == 1:
+    bina.append(number)
+    
+bina = bina[::-1]
+st = ''.join(str(i) for i in bina)
+print("octal value of", numbers, "is", st)
+
+
+number = 50
+number = numbers
+bina = []
+
+while number !=1:
+    b = number % 2
+    bina.append(b)
+    number = number // 2
+if number == 1:
+    bina.append(number)
+    
+bina = bina[::-1]
+st = ''.join(str(i) for i in bina)
+print("octal value of", numbers, "is", st)
+
+
 ###34. Python Program to check the given year is a leap year or not.
 
 """
@@ -732,7 +777,7 @@ si = p * t * r / 100
 print("SI", si)
 
 
-###38.Python Program to convert Decimal number to binary number.
+###38.Python Program to convert Decimal number to binary number(iterative)
 
 """
 ✍️ Example: Convert 13 to binary
@@ -744,19 +789,43 @@ Reading remainders from bottom to top: 1101
 So, 13 in decimal = 1101 in binary.
 """
 
-def find_oct(num):
-    if num < 8:
-        return num
-    else:
-        octn = 0
-        count = 0
-        while num >= 8:
-            rem = num % 8
-            num = num // 8
-            octn = octn + ( 10 ** count ) * rem
-            count = count + 1
-        last_rem = num % 8
-        return octn + ( 10 ** count ) * last_rem
+number = 50
+number = numbers
+bina = []
 
-num = 490
-print(find_oct(num))
+while number !=1:
+    b = number % 2
+    bina.append(b)
+    number = number // 2
+if number == 1:
+    bina.append(number)
+    
+bina = bina[::-1]
+st = ''.join(str(i) for i in bina)
+print("octal value of", numbers, "is", st)
+
+
+###38.Python Program to convert Decimal number to binary number(recursive)
+
+number = 50
+number = numbers
+bina = []
+
+def deci(number):
+    if number == 1:
+        bina.append(number)
+        return 1
+    else:
+        b = number % 2
+        bina.append(b)
+        return deci(number//2)
+
+deci(number)
+bina = bina[::-1]
+st = ''.join(str(i) for i in bina)
+print("octal value of", numbers, "is", st)
+
+###39.Python Program to convert Decimal number to binary number(builtin)
+
+number = 50
+print("octal value of", numbers, "is", bin(number)[2:])

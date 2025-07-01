@@ -698,7 +698,10 @@ bina = bina[::-1]
 st = ''.join(str(i) for i in bina)
 print("octal value of", numbers, "is", st)
 
+#build in
+#To get just the digits without the '0o' prefix:
 
+octal_digits = oct(decimal_number)[2:]
 
 ###34. Python Program to check the given year is a leap year or not.
 
@@ -814,6 +817,8 @@ st = ''.join(str(i) for i in bina)
 print("octal value of", numbers, "is", st)
 
 ###39.Python Program to convert Decimal number to binary number(builtin)
+
+#If you want to remove the '0b' prefix and get just the binary digits:
 
 number = 50
 print("octal value of", numbers, "is", bin(number)[2:])

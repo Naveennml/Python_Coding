@@ -520,6 +520,11 @@ for i in range(1, num):
 import math
 print(int(math.sqrt(num)))
 
+##one more way
+print(num ** 0.5)
+
+### cube root 
+print(num ** (1/3))
 
 ###29. Python program to calculate LCM of given two numbers.
 
